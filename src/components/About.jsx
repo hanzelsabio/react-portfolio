@@ -6,7 +6,7 @@ const About = () => {
       <div className="container" data-aos="fade-up" data-aos-delay="100">
         <div className="row gy-4">
           <div className="col-md-6 col-lg-4 col-xl-4">
-            <img src="/public/assets/formal-pic.png" className="img-fluid" style={{ pointerEvents: 'none' }} alt="" />
+            <img src="/assets/formal-pic.png" className="img-fluid" style={{ pointerEvents: 'none' }} alt="" />
           </div>
 
           <div className="col-md-6 col-lg-8 col-xl-8">

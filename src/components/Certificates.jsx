@@ -4,19 +4,19 @@ const certificates = [
   {
     title: 'Google IT Support',
     subtitle: 'Technical Support Fundamentals',
-    image: '/public/assets/google-cert-tech.png',
+    image: '/assets/google-cert-tech.png',
     link: 'https://coursera.org/share/371f36ce19a7eb2f3e41a65680e27714'
   },
   {
     title: 'IBM IT Support',
     subtitle: 'Introduction to Technical Support',
-    image: '/public/assets/ibm-intro-tech.png',
+    image: '/assets/ibm-intro-tech.png',
     link: 'https://www.coursera.org/verify/O4T1D33MABBE'
   },
   {
     title: 'Zuitt',
     subtitle: 'Basic Web Development Workshop',
-    image: '/public/assets/zuitt-cert.png',
+    image: '/assets/zuitt-cert.png',
     link: 'https://www.facebook.com/zuitttechcareer/'
   }
 ];
