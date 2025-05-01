@@ -22,7 +22,7 @@ const contacts = [
     icon: 'bi-file-earmark-text',
     title: 'Updated Resume',
     text: 'Hanzel Sabio - Resume',
-    link: '/public/assets/hanzel-sabio-resume.pdf'
+    link: '/assets/hanzel-sabio-resume.pdf'
   }
 ];
 

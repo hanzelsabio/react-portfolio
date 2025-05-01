@@ -1009,7 +1009,7 @@ section,
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 2px 0;
-  color: #fff;
+  color: #fff !important;
 }
 
 .contact .info-item p {
