@@ -21,6 +21,7 @@
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.5.3",
+    "react-waypoint": "^10.3.0",
     "swiper": "^11.2.6",
     "typed.js": "^2.1.0",
     "waypoints": "^4.0.1"
