@@ -9,6 +9,7 @@ import Certificates from '../components/Certificates';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Preloader from '../components/Preloader';
+import ScrollToTopButton from '../components/scrollToTop';
 
 function Home() {
   return (
@@ -22,9 +23,7 @@ function Home() {
         <Certificates />
         <Contact />
       </main>
-      <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center">
-        <i className="bi bi-arrow-up-short"></i>
-      </a>
+      <ScrollToTopButton />
       <Footer />
       <Preloader />
     </div>
