@@ -1,27 +1,23 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function Preloader() {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const handleLoad = () => {
-      const preloader = document.getElementById('preloader');
-      if (preloader) {
-        preloader.remove();
-      }
+      setLoading(false);
     };
 
     window.addEventListener('load', handleLoad);
 
-    // Cleanup event listener on unmount
     return () => {
       window.removeEventListener('load', handleLoad);
     };
   }, []);
 
-  return (
-    <>
-      <div id="preloader"></div>
-    </>
-  );
+  if (!loading) return null;
+
+  return <div id="preloader"></div>;
 }
 
 export default Preloader;
