@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
-function Preloader() {
-  const [loading, setLoading] = useState(true);
-
+const Preloader = () => {
   useEffect(() => {
+    const preloader = document.querySelector('#preloader');
     const handleLoad = () => {
-      setLoading(false);
+      if (preloader) {
+        preloader.remove();
+      }
     };
 
     window.addEventListener('load', handleLoad);
@@ -15,9 +16,11 @@ function Preloader() {
     };
   }, []);
 
-  if (!loading) return null;
-
-  return <div id="preloader"></div>;
-}
+  return (
+    <>
+      <div id="preloader"></div>
+    </>
+  );
+};
 
 export default Preloader;
