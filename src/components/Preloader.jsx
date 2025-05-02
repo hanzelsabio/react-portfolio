@@ -1,24 +1,27 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Preloader = () => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    const preloader = document.querySelector('#preloader');
     const handleLoad = () => {
-      if (preloader) {
-        preloader.remove();
-      }
+      setLoading(false);
     };
 
-    window.addEventListener('load', handleLoad);
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
 
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
+    return () => window.removeEventListener('load', handleLoad);
   }, []);
 
   return (
     <>
-      <div id="preloader"></div>
+      {loading && (
+        <div id="preloader"></div>
+      )}
     </>
   );
 };
