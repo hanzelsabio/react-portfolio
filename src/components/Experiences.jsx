@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Experience = () => {
+function Experience() {
   return (
     <section id="experiences" className="experiences section">
       <div className="container section-title" data-aos="fade-up">

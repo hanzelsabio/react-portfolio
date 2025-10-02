@@ -1,32 +1,32 @@
 import React from 'react';
 
-const contacts = [
-  {
-    icon: 'bi-telephone',
-    title: 'Mobile',
-    text: '+639669238157'
-  },
-  {
-    icon: 'bi-envelope',
-    title: 'Email',
-    text: 'zeluckgt01@gmail.com',
-    link: 'mailto:zeluckgt01@gmail.com'
-  },
-  {
-    icon: 'bi-facebook',
-    title: 'Facebook',
-    text: 'facebook.com/zelsabiow',
-    link: 'https://www.facebook.com/zelsabiow'
-  },
-  {
-    icon: 'bi-file-earmark-text',
-    title: 'Updated Resume',
-    text: 'Hanzel Sabio - Resume',
-    link: '/assets/hanzel-sabio-resume.pdf'
-  }
-];
-
-const Contact = () => {
+function Contact() {
+  const contacts = [
+    {
+      icon: 'bi-telephone',
+      title: 'Mobile',
+      text: '+639669238157'
+    },
+    {
+      icon: 'bi-envelope',
+      title: 'Email',
+      text: 'zeluckgt01@gmail.com',
+      link: 'mailto:zeluckgt01@gmail.com'
+    },
+    {
+      icon: 'bi-facebook',
+      title: 'Facebook',
+      text: 'facebook.com/zelsabiow',
+      link: 'https://www.facebook.com/zelsabiow'
+    },
+    {
+      icon: 'bi-file-earmark-text',
+      title: 'Updated Resume',
+      text: 'Hanzel Sabio - Resume',
+      link: '/assets/hanzel-sabio-resume.pdf'
+    }
+  ];
+    
   return (
     <section id="contact" className="contact section">
       <div className="container section-title text-end" data-aos="fade-up">

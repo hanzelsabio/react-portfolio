@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const Header = () => {
+function Header() {
   useEffect(() => {
     // Scrollspy functionality to track active link as you scroll
     const navmenulinks = document.querySelectorAll('.navmenu a');

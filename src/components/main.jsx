@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 
 import '../App.css';
 
-const Home = () => {
+function Home() {
   const typedRef = useRef(null);
   const typedInstance = useRef(null);
 

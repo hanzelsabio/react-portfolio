@@ -1,20 +1,20 @@
 import React from "react";
 
-const skillsData = [
-  { name: "HTML / CSS", value: 100 },
-  { name: "JavaScript", value: 70 },
-  { name: "Bootstrap", value: 100 },
-  { name: "PHP", value: 70 },
-  { name: "MySQL", value: 50 },
-  { name: "Canva", value: 100, backgroundColor: "#eee" },
-  { name: "Figma", value: 100, backgroundColor: "#eee" },
-  { name: "MS Office", value: 100, backgroundColor: "#eee" },
-  { name: "GITHUB / GIT", value: 100 },
-  { name: "VS Code", value: 100 },
-  { name: "Terminal", value: 100 },
-];
-
-const Skills = () => {
+function Skills() {
+  const skillsData = [
+    { name: "HTML / CSS", value: 100 },
+    { name: "JavaScript", value: 70 },
+    { name: "Bootstrap", value: 100 },
+    { name: "PHP", value: 70 },
+    { name: "MySQL", value: 50 },
+    { name: "Canva", value: 100, backgroundColor: "#eee" },
+    { name: "Figma", value: 100, backgroundColor: "#eee" },
+    { name: "MS Office", value: 100, backgroundColor: "#eee" },
+    { name: "GITHUB / GIT", value: 100 },
+    { name: "VS Code", value: 100 },
+    { name: "Terminal", value: 100 },
+  ];
+  
   return (
     <section id="skills" className="skills">
       <div className="container section-title text-start" data-aos="fade-up">

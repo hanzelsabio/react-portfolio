@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = () => {
+function About() {
   return (
     <section id="about_me" className="about_me section">
       <div className="container" data-aos="fade-up" data-aos-delay="100">
