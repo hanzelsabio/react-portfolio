@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Modal } from 'react-bootstrap';
 
 const cardData = [
-  { id: 1, title: 'DPT Inc. Website', text: 'HTML, CSS, JavaScript, Bootstrap', image: '../assets/DPTInc-Website.png', link: 'https://dptincgenerator.vercel.app/', category: 'static' },
-  { id: 2, title: 'Online Portfolio', text: 'HTML, CSS, JavaScript, Bootstrap', image: '../assets/Online-Portfolio.png', link: 'https://hanzelsabio.vercel.app', category: 'static' },
-  { id: 3, title: 'IV Inventory System', text: 'PHP, JavaScript, Bootstrap, MySQL', image: '../assets/IV-Inventory-System.png', link: 'https://dptincgenerator.vercel.app/', category: 'dynamic' },
+  { id: 1, title: 'DPT Inc. Website', heading: 'HTML, CSS, JavaScript, Bootstrap', body: 'One of my internship project, a static website design created for DPT Incorporated.', image: '../assets/DPTInc-Website.png', link: 'https://dptincgenerator.vercel.app/', category: 'static' },
+  { id: 2, title: 'Online Portfolio', heading: 'React JS, Bootstrap', body: 'My personal portfolio website', image: '../assets/Online-Portfolio.png', link: 'https://hanzelsabio.vercel.app', category: 'static' },
+  { id: 3, title: 'IV Inventory System', heading: 'PHP, JavaScript, Bootstrap, MySQL', body: 'Personal project features inventory management system', image: '../assets/IV-Inventory-System.png', link: 'https://dptincgenerator.vercel.app/', category: 'dynamic' },
 ];
 
 function Projects() {
@@ -63,23 +63,22 @@ function ExampleModal({ show, handleClose, card }) {
   return (
     <Modal show={show} onHide={handleClose} centered>
       <Modal.Header
-        style={{ color: '#fff', background: '#222', border: 'none', borderRadius: '0' }}
+        style={{ color: '#fff', background: '#111', border: 'none', borderRadius: '0' }}
         // closeButton
         // className="custom-modal-header"
         // closeVariant="white"
       >
         <Modal.Title className="px-2">{card.title}</Modal.Title>
       </Modal.Header>
-      <Modal.Body className="px-4" style={{ color: '#fff', background: '#222' }}>
-        <p>{card.text}</p>
+      <Modal.Body className="px-4" style={{ color: '#fff', background: '#111' }}>
+        <p>{card.body}</p>
       </Modal.Body>
       <Modal.Footer
-        style={{ color: '#fff', background: '#222', border: 'none', borderRadius: '0' }}
+        style={{ color: '#fff', background: '#111', border: 'none', borderRadius: '0' }}
       >
         <Button
-          variant="secondary"
           onClick={handleClose}
-          style={{ borderRadius: '0' }}
+          style={{ borderRadius: '0', border: 'none', background: 'none' }}
         >
           Close
         </Button>
@@ -120,7 +119,7 @@ function DynamicCardGrid({ cards }) {
                 style={{ color: '#fff', fontSize: '13px' }}
                 className="text-center"
               >
-                {card.text}
+                {card.heading}
               </Card.Text>
             </Card.Body>
             <Card.Body
