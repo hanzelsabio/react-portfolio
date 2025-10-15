@@ -5,7 +5,8 @@ import Main from '../components/main';
 import About from '../components/About';
 import Experiences from '../components/Experiences';
 import Skills from '../components/Skills';
-import Certificates from '../components/Certificates';
+import Projects from '../components/Projects/Project_Card.jsx';
+// import MediaCard from '../components/Card';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Preloader from '../components/Preloader';
@@ -20,7 +21,7 @@ function Home() {
         <About />
         <Experiences />
         <Skills />
-        <Certificates />
+        <Projects />
         <Contact />
       </main>
       <ScrollToTopButton />

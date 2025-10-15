@@ -31,11 +31,36 @@ function About() {
                     2019 - 2024
                   </p>
                 </div>
+                <div className="col-lg-4">
+                    <h4>Country</h4>
+                    <p>
+                      Philippines
+                    </p>
+                </div>
+
+                <div className="col-lg-8">
+                    <h4>Let's Connect</h4>
+                    <div className="social-icon d-flex align-items-center">
+                      <a href="https://github.com/hanzelsabio" target="_blank">
+                        <i className="bi bi-github flex-shrink-0"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/hanzel-mark-sabio" target="_blank">
+                        <i className="bi bi-linkedin flex-shrink-0"></i>
+                      </a>
+                      {/* <a href="https://www.facebook.com/zelsabiow" target="_blank">
+                        <i className="bi bi-facebook flex-shrink-0"></i>
+                      </a>
+                      <a href="https://www.instagram.com/zelsabiow" target="_blank">
+                        <i className="bi bi-instagram flex-shrink-0"></i>
+                      </a> */}
+                    </div>        
+                </div>
+
               </div>
-              <h4>Country</h4>
-              <p>Philippines</p>
+
             </div>
           </div>
+
         </div>
       </div>
     </section>

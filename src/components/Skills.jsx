@@ -4,6 +4,9 @@ function Skills() {
   const skillsData = [
     { name: "HTML / CSS", value: 100 },
     { name: "JavaScript", value: 70 },
+    // { name: "TypeScript", value: 20 },
+    { name: "React JS", value: 30 },
+    { name: "Tailwind CSS", value: 30 },
     { name: "Bootstrap", value: 100 },
     { name: "PHP", value: 70 },
     { name: "MySQL", value: 50 },
@@ -25,7 +28,7 @@ function Skills() {
         <div className="row gy-4">
           {/* First Column */}
           <div className="col-lg-4">
-            {skillsData.slice(0, 5).map((skill, index) => (
+            {skillsData.slice(0, 7).map((skill, index) => (
               <div className="progress" key={index}>
                 <span className="skill">
                   <span>{skill.name}</span> <i className="val">{skill.value}%</i>
@@ -49,7 +52,7 @@ function Skills() {
 
           {/* Second Column */}
           <div className="col-lg-4">
-            {skillsData.slice(5, 8).map((skill, index) => (
+            {skillsData.slice(7, 10).map((skill, index) => (
               <div className="progress" key={index}>
                 <span className="skill">
                   <span>{skill.name}</span> <i className="val">{skill.value}%</i>
@@ -73,7 +76,7 @@ function Skills() {
 
           {/* Third Column */}
           <div className="col-lg-4">
-            {skillsData.slice(8, 11).map((skill, index) => (
+            {skillsData.slice(10, 13).map((skill, index) => (
               <div className="progress" key={index}>
                 <span className="skill">
                   <span>{skill.name}</span> <i className="val">{skill.value}%</i>

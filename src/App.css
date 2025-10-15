@@ -723,6 +723,34 @@ section,
 }
 
 /*--------------------------------------------------------------
+  # Social Icon Section
+  --------------------------------------------------------------*/
+.social-icon i {
+  font-size: 23px;
+  color: var(--contrast-color);
+  background-color: #292929;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  border: 3px solid #111111;
+  margin-right: 5px;
+}
+
+.social-icon i:hover {
+  color: #fff;
+  background-color: #111111;
+  border-color: #222222;
+}
+
+.social-icon a {
+  margin-right: 8px;
+}
+
+/*--------------------------------------------------------------
   # Resume Section
   --------------------------------------------------------------*/
 .experiences {
@@ -858,30 +886,30 @@ section,
 }
 
 /*--------------------------------------------------------------
-  # Certificates Section
+  # Projects Section
   --------------------------------------------------------------*/
-.certificates {
-  padding: 50px 0 300px 0;
+.projects {
+  padding: 0 0 300px 0;
   margin: 0 30px;
 }
 
-.certificates .section-title h2:after {
+.projects .section-title h2:after {
   left: 0;
   right: 0;
 }
 
-.certificates .certificates-filters {
+.projects .projects-filters {
   padding: 0;
   margin: 0 auto 20px auto;
   list-style: none;
   text-align: center;
 }
 
-.certificates .section-title h2:after {
+.projects .section-title h2:after {
   right: 1;
 }
 
-.certificates .certificates-filters li {
+.projects .projects-filters li {
   cursor: pointer;
   display: inline-block;
   padding: 0;
@@ -895,31 +923,31 @@ section,
   transition: all 0.3s ease-in-out;
 }
 
-.certificates .certificates-filters li:hover,
-.certificates .certificates-filters li.filter-active {
+.projects .projects-filters li:hover,
+.projects .projects-filters li.filter-active {
   color: var(--accent-color);
 }
 
-.certificates .certificates-filters li:first-child {
+.projects .projects-filters li:first-child {
   margin-left: 0;
 }
 
-.certificates .certificates-filters li:last-child {
+.projects .projects-filters li:last-child {
   margin-right: 0;
 }
 
 @media (max-width: 575px) {
-  .certificates .certificates-filters li {
+  .projects .projects-filters li {
     font-size: 14px;
     margin: 0 5px;
   }
 }
 
-.certificates .certificates-item {
+.projects .projects-item {
   position: relative;
 }
 
-.certificates .certificates-item .certificates-info {
+.projects .projects-item .projects-info {
   opacity: 0;
   position: absolute;
   left: 30px;
@@ -931,21 +959,21 @@ section,
   padding: 15px;
 }
 
-.certificates .certificates-item .certificates-info h4 {
+.projects .projects-item .projects-info h4 {
   font-size: 18px;
   font-weight: 600;
   padding-right: 50px;
 }
 
-.certificates .certificates-item .certificates-info p {
+.projects .projects-item .projects-info p {
   color: #888;
   font-size: 14px;
   margin-bottom: 0;
   padding-right: 50px;
 }
 
-.certificates .certificates-item .certificates-info .preview-link,
-.certificates .certificates-item .certificates-info .details-link {
+.projects .projects-item .projects-info .preview-link,
+.projects .projects-item .projects-info .details-link {
   position: absolute;
   right: 50px;
   font-size: 24px;
@@ -955,17 +983,17 @@ section,
   line-height: 0;
 }
 
-.certificates .certificates-item .certificates-info .preview-link:hover,
-.certificates .certificates-item .certificates-info .details-link:hover {
+.projects .projects-item .projects-info .preview-link:hover,
+.projects .projects-item .projects-info .details-link:hover {
   color: var(--accent-color);
 }
 
-.certificates .certificates-item .certificates-info .details-link {
+.projects .projects-item .projects-info .details-link {
   right: 14px;
   font-size: 28px;
 }
 
-.certificates .certificates-item:hover .certificates-info {
+.projects .projects-item:hover .projects-info {
   opacity: 1;
   bottom: 20px;
 }
