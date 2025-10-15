@@ -14,10 +14,10 @@ function Contact() {
       link: 'mailto:zeluckgt01@gmail.com'
     },
     {
-      icon: 'bi-facebook',
-      title: 'Facebook',
-      text: 'facebook.com/zelsabiow',
-      link: 'https://www.facebook.com/zelsabiow'
+      icon: 'bi bi-linkedin',
+      title: 'LinkedIn',
+      text: 'hanzel-mark-sabio',
+      link: 'https://www.linkedin.com/in/hanzel-mark-sabio'
     },
     {
       icon: 'bi-file-earmark-text',

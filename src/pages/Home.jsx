@@ -5,7 +5,7 @@ import Main from '../components/main';
 import About from '../components/About';
 import Experiences from '../components/Experiences';
 import Skills from '../components/Skills';
-import Projects from '../components/Projects/Project_Card.jsx';
+import Projects from '../components/Projects.jsx';
 // import MediaCard from '../components/Card';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';

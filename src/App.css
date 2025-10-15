@@ -1002,8 +1002,12 @@ section,
   # Contact Section
   --------------------------------------------------------------*/
 .contact {
-  padding: 50px 0 250px 0;
+  padding: 100px 0 250px 0;
   margin: 0 30px;
+}
+
+.contact .section-title {
+  padding-bottom: 20px;
 }
 
 .contact .section-title h2:after {
@@ -1019,17 +1023,17 @@ section,
 }
 
 .contact .info-item i {
-  font-size: 20px;
+  font-size: 25px;
   color: var(--contrast-color);
   background-color: var(--accent-color);
-  width: 56px;
-  height: 56px;
+  width: 70px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
-  border: 2px solid #252525;
+  border: 7px solid #111;
   margin-right: 15px;
 }
 
@@ -1037,7 +1041,7 @@ section,
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 2px 0;
-  color: #fff !important;
+  color: #fff;
 }
 
 .contact .info-item p {
@@ -1048,8 +1052,9 @@ section,
 }
 
 .contact .info-item:hover i {
-  background: #111;
-  color: var(--accent-color);
+  background: #a50113;
+  color: #fff;
+  border-color: #111;
 }
 
 .contact .php-email-form {
@@ -1117,4 +1122,22 @@ footer {
   text-align: center;
   padding: 25px 25px;
   font-size: 12px;
+}
+
+/* Make modal close button pure white with no border or background */
+.custom-modal-header .btn-close {
+  filter: invert(1); /* turns the default black "×" to white */
+  opacity: 1;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Remove hover/active borders too */
+.custom-modal-header .btn-close:hover,
+.custom-modal-header .btn-close:focus,
+.custom-modal-header .btn-close:active {
+  border: none !important;
+  box-shadow: none !important;
+  opacity: 0.7; /* optional hover fade */
 }
