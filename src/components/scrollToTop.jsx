@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,13 +9,13 @@ function ScrollToTopButton() {
     };
 
     // Show/hide on scroll or load
-    window.addEventListener('scroll', toggleScrollTop);
-    window.addEventListener('load', toggleScrollTop);
+    window.addEventListener("scroll", toggleScrollTop);
+    window.addEventListener("load", toggleScrollTop);
 
     // Clean up listeners
     return () => {
-      window.removeEventListener('scroll', toggleScrollTop);
-      window.removeEventListener('load', toggleScrollTop);
+      window.removeEventListener("scroll", toggleScrollTop);
+      window.removeEventListener("load", toggleScrollTop);
     };
   }, []);
 
@@ -23,7 +23,7 @@ function ScrollToTopButton() {
     e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -32,11 +32,13 @@ function ScrollToTopButton() {
       href="#"
       onClick={scrollToTop}
       id="scroll-top"
-      className={`scroll-top d-flex align-items-center justify-content-center ${isVisible ? 'active' : ''}`}
+      className={`scroll-top d-flex align-items-center justify-content-center ${
+        isVisible ? "active" : ""
+      }`}
     >
       <i className="bi bi-arrow-up-short"></i>
     </a>
   );
-};
+}
 
 export default ScrollToTopButton;

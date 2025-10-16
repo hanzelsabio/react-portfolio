@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 function Header() {
   useEffect(() => {
     // Scrollspy functionality to track active link as you scroll
-    const navmenulinks = document.querySelectorAll('.navmenu a');
-    const sections = document.querySelectorAll('section'); // Assuming each section has the <section> tag
+    const navmenulinks = document.querySelectorAll(".navmenu a");
+    const sections = document.querySelectorAll("section"); // Assuming each section has the <section> tag
 
     // Function to highlight the active link based on scroll position
     const onScroll = () => {
@@ -12,34 +12,40 @@ function Header() {
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        if (
+          rect.top <= window.innerHeight / 2 &&
+          rect.bottom >= window.innerHeight / 2
+        ) {
           currentSection = section;
         }
       });
 
       navmenulinks.forEach((link) => {
-        link.classList.remove('active');
-        if (currentSection && link.getAttribute('href').slice(1) === currentSection.id) {
-          link.classList.add('active');
+        link.classList.remove("active");
+        if (
+          currentSection &&
+          link.getAttribute("href").slice(1) === currentSection.id
+        ) {
+          link.classList.add("active");
         }
       });
     };
 
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
 
     // Cleanup listener when component is unmounted
     return () => {
-      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
   const handleToggleClick = () => {
-    document.body.classList.toggle('mobile-nav-active');
+    document.body.classList.toggle("mobile-nav-active");
 
-    const toggleBtn = document.querySelector('.mobile-nav-toggle');
+    const toggleBtn = document.querySelector(".mobile-nav-toggle");
     if (toggleBtn) {
-      toggleBtn.classList.toggle('bi-list');
-      toggleBtn.classList.toggle('bi-x');
+      toggleBtn.classList.toggle("bi-list");
+      toggleBtn.classList.toggle("bi-x");
     }
   };
 
@@ -51,12 +57,26 @@ function Header() {
         </a>
         <nav id="navmenu" className="navmenu">
           <ul>
-            <li><a href="#" className="active">Home</a></li>
-            <li><a href="#about_me">About Me</a></li>
-            <li><a href="#experiences">Experiences</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href="#" className="active">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about_me">About Me</a>
+            </li>
+            <li>
+              <a href="#experiences">Experiences</a>
+            </li>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
           <i
             className="mobile-nav-toggle d-md-none bi bi-list"
@@ -69,6 +89,6 @@ function Header() {
       </div>
     </header>
   );
-};
+}
 
 export default Header;

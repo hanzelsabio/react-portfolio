@@ -26,7 +26,7 @@ function Projects() {
 
       <Container>
         {/* Filter Buttons */}
-        <ul className="projects-filters d-flex justify-content-center list-unstyled gap-3 mb-4">
+        <ul className="projects-filters d-flex justify-content-center list-unstyled gap-3 mb-4" data-aos="fade-up" data-aos-delay="100">
           <li
             className={`filter-item ${filter === '*' ? 'filter-active' : ''}`}
             onClick={() => handleFilterChange('*')}
@@ -98,7 +98,7 @@ function DynamicCardGrid({ cards }) {
   };
 
   return (
-    <Row>
+    <Row data-aos="fade-up" data-aos-delay="100">
       {cards.map((card) => (
         <Col key={card.id} md={4} className="mb-4">
           <Card style={{ border: 'none', borderRadius: '0' }}>

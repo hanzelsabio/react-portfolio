@@ -1,4 +1,5 @@
 import React from "react";
+import { Container, Row, Col } from 'react-bootstrap';
 
 function Skills() {
   const skillsData = [
@@ -20,14 +21,14 @@ function Skills() {
   
   return (
     <section id="skills" className="skills">
-      <div className="container section-title text-start" data-aos="fade-up">
+      <Container className="section-title text-start" data-aos="fade-up">
         <h2>Skills</h2>
-      </div>
+      </Container>
 
-      <div className="container skills-content skills-animation">
-        <div className="row gy-4">
+      <Container className="skills-content skills-animation" data-aos="fade-up" data-aos-delay="100">
+        <Row className="gy-4">
           {/* First Column */}
-          <div className="col-lg-4">
+          <Col lg={4}>
             {skillsData.slice(0, 7).map((skill, index) => (
               <div className="progress" key={index}>
                 <span className="skill">
@@ -48,10 +49,10 @@ function Skills() {
                 </div>
               </div>
             ))}
-          </div>
+          </Col>
 
           {/* Second Column */}
-          <div className="col-lg-4">
+          <Col lg={4}>
             {skillsData.slice(7, 10).map((skill, index) => (
               <div className="progress" key={index}>
                 <span className="skill">
@@ -72,10 +73,10 @@ function Skills() {
                 </div>
               </div>
             ))}
-          </div>
+          </Col>
 
           {/* Third Column */}
-          <div className="col-lg-4">
+          <Col lg={4}>
             {skillsData.slice(10, 13).map((skill, index) => (
               <div className="progress" key={index}>
                 <span className="skill">
@@ -96,9 +97,9 @@ function Skills() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };
