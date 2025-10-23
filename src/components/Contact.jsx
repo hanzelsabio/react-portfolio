@@ -24,7 +24,7 @@ function Contact() {
       icon: "bi-file-earmark-text",
       title: "Updated Resume",
       text: "Hanzel Sabio - Resume",
-      link: "/assets/hanzel-sabio-resume.pdf",
+      link: "",
     },
   ];
 

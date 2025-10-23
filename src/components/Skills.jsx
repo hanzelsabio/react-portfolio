@@ -1,11 +1,10 @@
-import React from "react";
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 function Skills() {
   const skillsData = [
     { name: "HTML / CSS", value: 100 },
     { name: "JavaScript", value: 70 },
-    // { name: "TypeScript", value: 20 },
     { name: "React JS", value: 30 },
     { name: "Tailwind CSS", value: 30 },
     { name: "Bootstrap", value: 100 },
@@ -18,28 +17,57 @@ function Skills() {
     { name: "VS Code", value: 100 },
     { name: "Terminal", value: 100 },
   ];
-  
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const bars = entry.target.querySelectorAll(".progress-bar");
+            bars.forEach((bar) => {
+              const value = bar.getAttribute("aria-valuenow");
+              bar.style.transition = "width 1.5s ease-in-out";
+              bar.style.width = `${value}%`;
+            });
+            observer.unobserve(entry.target); // Run once
+          }
+        });
+      },
+      { threshold: 0.4 } // 40% visible before triggering
+    );
+
+    const targets = document.querySelectorAll(".skills-animation");
+    targets.forEach((target) => observer.observe(target));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="skills" className="skills">
       <Container className="section-title text-start" data-aos="fade-up">
         <h2>Skills</h2>
       </Container>
 
-      <Container className="skills-content skills-animation" data-aos="fade-up" data-aos-delay="100">
+      <Container
+        className="skills-content skills-animation"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         <Row className="gy-4">
           {/* First Column */}
           <Col lg={4}>
             {skillsData.slice(0, 7).map((skill, index) => (
               <div className="progress" key={index}>
                 <span className="skill">
-                  <span>{skill.name}</span> <i className="val">{skill.value}%</i>
+                  <span>{skill.name}</span>{" "}
+                  <i className="val">{skill.value}%</i>
                 </span>
                 <div className="progress-bar-wrap">
                   <div
                     className="progress-bar"
                     style={{
                       backgroundColor: skill.backgroundColor || "",
-                      width: `${skill.value}%`,
+                      width: "0%", // start hidden
                     }}
                     role="progressbar"
                     aria-valuenow={skill.value}
@@ -56,14 +84,15 @@ function Skills() {
             {skillsData.slice(7, 10).map((skill, index) => (
               <div className="progress" key={index}>
                 <span className="skill">
-                  <span>{skill.name}</span> <i className="val">{skill.value}%</i>
+                  <span>{skill.name}</span>{" "}
+                  <i className="val">{skill.value}%</i>
                 </span>
                 <div className="progress-bar-wrap">
                   <div
                     className="progress-bar"
                     style={{
                       backgroundColor: skill.backgroundColor || "",
-                      width: `${skill.value}%`,
+                      width: "0%",
                     }}
                     role="progressbar"
                     aria-valuenow={skill.value}
@@ -80,14 +109,15 @@ function Skills() {
             {skillsData.slice(10, 13).map((skill, index) => (
               <div className="progress" key={index}>
                 <span className="skill">
-                  <span>{skill.name}</span> <i className="val">{skill.value}%</i>
+                  <span>{skill.name}</span>{" "}
+                  <i className="val">{skill.value}%</i>
                 </span>
                 <div className="progress-bar-wrap">
                   <div
                     className="progress-bar"
                     style={{
                       backgroundColor: skill.backgroundColor || "",
-                      width: `${skill.value}%`,
+                      width: "0%",
                     }}
                     role="progressbar"
                     aria-valuenow={skill.value}
@@ -102,6 +132,6 @@ function Skills() {
       </Container>
     </section>
   );
-};
+}
 
 export default Skills;
