@@ -1,14 +1,38 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button, Modal } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
 
 const cardData = [
-  { id: 1, title: 'DPT Inc. Website', heading: 'HTML, CSS, JavaScript, Bootstrap', body: 'One of my internship project, a static website design created for DPT Incorporated.', image: '../assets/DPTInc-Website.png', link: 'https://dptincgenerator.vercel.app/', category: 'static' },
-  { id: 2, title: 'Online Portfolio', heading: 'React JS, Bootstrap', body: 'My personal portfolio website', image: '../assets/Online-Portfolio.png', link: 'https://hanzelsabio.vercel.app', category: 'static' },
-  { id: 3, title: 'IV Inventory System', heading: 'PHP, JavaScript, Bootstrap, MySQL', body: 'Personal project features inventory management system', image: '../assets/IV-Inventory-System.png', link: 'https://dptincgenerator.vercel.app/', category: 'dynamic' },
+  {
+    id: 1,
+    title: "DPT Inc. Website",
+    heading: "HTML, CSS, JavaScript, Bootstrap",
+    body: "One of my internship project, a static website design created for DPT Incorporated.",
+    image: "../assets/DPTInc-Website.png",
+    link: "https://dptincgenerator.vercel.app/",
+    category: "static",
+  },
+  {
+    id: 2,
+    title: "Online Portfolio",
+    heading: "React JS, Bootstrap",
+    body: "My personal portfolio website",
+    image: "../assets/Online-Portfolio.png",
+    link: "",
+    category: "static",
+  },
+  {
+    id: 3,
+    title: "IV Inventory System",
+    heading: "PHP, JavaScript, Bootstrap, MySQL",
+    body: "Personal project features inventory management system",
+    image: "../assets/IV-Inventory-System.png",
+    link: "",
+    category: "dynamic",
+  },
 ];
 
 function Projects() {
-  const [filter, setFilter] = useState('*');
+  const [filter, setFilter] = useState("*");
 
   const handleFilterChange = (category) => {
     setFilter(category);
@@ -16,7 +40,9 @@ function Projects() {
 
   // Filter cards based on category
   const filteredCards =
-    filter === '*' ? cardData : cardData.filter((card) => card.category === filter);
+    filter === "*"
+      ? cardData
+      : cardData.filter((card) => card.category === filter);
 
   return (
     <section id="projects" className="projects section">
@@ -26,25 +52,33 @@ function Projects() {
 
       <Container>
         {/* Filter Buttons */}
-        <ul className="projects-filters d-flex justify-content-center list-unstyled gap-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <ul
+          className="projects-filters d-flex justify-content-center list-unstyled gap-3 mb-4"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <li
-            className={`filter-item ${filter === '*' ? 'filter-active' : ''}`}
-            onClick={() => handleFilterChange('*')}
-            style={{ cursor: 'pointer' }}
+            className={`filter-item ${filter === "*" ? "filter-active" : ""}`}
+            onClick={() => handleFilterChange("*")}
+            style={{ cursor: "pointer" }}
           >
             All
           </li>
           <li
-            className={`filter-item ${filter === 'static' ? 'filter-active' : ''}`}
-            onClick={() => handleFilterChange('static')}
-            style={{ cursor: 'pointer' }}
+            className={`filter-item ${
+              filter === "static" ? "filter-active" : ""
+            }`}
+            onClick={() => handleFilterChange("static")}
+            style={{ cursor: "pointer" }}
           >
             Static
           </li>
           <li
-            className={`filter-item ${filter === 'dynamic' ? 'filter-active' : ''}`}
-            onClick={() => handleFilterChange('dynamic')}
-            style={{ cursor: 'pointer' }}
+            className={`filter-item ${
+              filter === "dynamic" ? "filter-active" : ""
+            }`}
+            onClick={() => handleFilterChange("dynamic")}
+            style={{ cursor: "pointer" }}
           >
             Dynamic
           </li>
@@ -63,22 +97,35 @@ function ExampleModal({ show, handleClose, card }) {
   return (
     <Modal show={show} onHide={handleClose} centered>
       <Modal.Header
-        style={{ color: '#fff', background: '#111', border: 'none', borderRadius: '0' }}
+        style={{
+          color: "#fff",
+          background: "#111",
+          border: "none",
+          borderRadius: "0",
+        }}
         // closeButton
         // className="custom-modal-header"
         // closeVariant="white"
       >
         <Modal.Title className="px-2">{card.title}</Modal.Title>
       </Modal.Header>
-      <Modal.Body className="px-4" style={{ color: '#fff', background: '#111' }}>
+      <Modal.Body
+        className="px-4"
+        style={{ color: "#fff", background: "#111" }}
+      >
         <p>{card.body}</p>
       </Modal.Body>
       <Modal.Footer
-        style={{ color: '#fff', background: '#111', border: 'none', borderRadius: '0' }}
+        style={{
+          color: "#fff",
+          background: "#111",
+          border: "none",
+          borderRadius: "0",
+        }}
       >
         <Button
           onClick={handleClose}
-          style={{ borderRadius: '0', border: 'none', background: 'none' }}
+          style={{ borderRadius: "0", border: "none", background: "none" }}
         >
           Close
         </Button>
@@ -101,22 +148,22 @@ function DynamicCardGrid({ cards }) {
     <Row data-aos="fade-up" data-aos-delay="100">
       {cards.map((card) => (
         <Col key={card.id} md={4} className="mb-4">
-          <Card style={{ border: 'none', borderRadius: '0' }}>
+          <Card style={{ border: "none", borderRadius: "0" }}>
             <Card.Img
               variant="top"
               src={card.image}
               alt={card.title}
-              style={{ borderRadius: '0' }}
+              style={{ borderRadius: "0" }}
             />
-            <Card.Body style={{ backgroundColor: '#000' }}>
+            <Card.Body style={{ backgroundColor: "#000" }}>
               <Card.Title
-                style={{ color: '#fff', fontSize: '17px' }}
+                style={{ color: "#fff", fontSize: "17px" }}
                 className="mt-2 text-center"
               >
                 {card.title}
               </Card.Title>
               <Card.Text
-                style={{ color: '#fff', fontSize: '13px' }}
+                style={{ color: "#fff", fontSize: "13px" }}
                 className="text-center"
               >
                 {card.heading}
@@ -124,25 +171,25 @@ function DynamicCardGrid({ cards }) {
             </Card.Body>
             <Card.Body
               style={{
-                backgroundColor: '#222',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
+                backgroundColor: "#222",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
               }}
             >
               <a
                 href={card.link}
                 target="_blank"
                 rel="noreferrer"
-                style={{ color: '#df1529', textDecoration: 'none' }}
+                style={{ color: "#df1529", textDecoration: "none" }}
               >
                 Live Preview
               </a>
               <Button
                 size="sm"
                 style={{
-                  backgroundColor: 'transparent',
-                  border: 'none',
+                  backgroundColor: "transparent",
+                  border: "none",
                 }}
                 onClick={() => handleShow(card)}
               >
@@ -152,7 +199,11 @@ function DynamicCardGrid({ cards }) {
           </Card>
         </Col>
       ))}
-      <ExampleModal show={showModal} handleClose={handleClose} card={selectedCard} />
+      <ExampleModal
+        show={showModal}
+        handleClose={handleClose}
+        card={selectedCard}
+      />
     </Row>
   );
 }

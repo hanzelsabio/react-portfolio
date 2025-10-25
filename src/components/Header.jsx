@@ -58,7 +58,7 @@ function Header() {
         <nav id="navmenu" className="navmenu">
           <ul>
             <li>
-              <a href="#" className="active">
+              <a href="/" className="active">
                 Home
               </a>
             </li>
@@ -72,7 +72,7 @@ function Header() {
               <a href="#skills">Skills</a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#rojects">Projects</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
