@@ -147,7 +147,7 @@ function DynamicCardGrid({ cards }) {
   return (
     <Row data-aos="fade-up" data-aos-delay="100">
       {cards.map((card) => (
-        <Col key={card.id} md={4} className="mb-4">
+        <Col key={card.id} sm={6} lg={4} className="mb-4">
           <Card style={{ border: "none", borderRadius: "0" }}>
             <Card.Img
               variant="top"
@@ -157,18 +157,35 @@ function DynamicCardGrid({ cards }) {
             />
             <Card.Body style={{ backgroundColor: "#000" }}>
               <Card.Title
-                style={{ color: "#fff", fontSize: "17px" }}
+                style={{
+                  color: "#fff",
+                  fontSize: "17px",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  display: "-webkit-box",
+                  WebkitLineClamp: 1, // limit to 1 line
+                  WebkitBoxOrient: "vertical",
+                }}
                 className="mt-2 text-center"
               >
                 {card.title}
               </Card.Title>
+
               <Card.Text
-                style={{ color: "#fff", fontSize: "13px" }}
+                style={{
+                  color: "#fff",
+                  fontSize: "13px",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  display: "-webkit-box",
+                  WebkitLineClamp: 2, // limit to 2 lines
+                  WebkitBoxOrient: "vertical",
+                }}
                 className="text-center"
               >
                 {card.heading}
               </Card.Text>
-            </Card.Body>
+            </Card.Body>{" "}
             <Card.Body
               style={{
                 backgroundColor: "#222",
