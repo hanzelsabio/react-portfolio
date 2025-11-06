@@ -32,10 +32,10 @@ const cardData = [
   {
     id: 4,
     title: "Brand Template",
-    heading: "React JS, JavaScript, Tailwind CSS, Node JS",
-    body: "An e-commerce product website template features a product display, shopping cart functionality, and a checkout process.",
+    heading: "React JS, JavaScript, Tailwind CSS",
+    body: "An e-commerce website template for products features a product display, shopping cart functionality, and a checkout process.",
     image: "../assets/Brand-Website.png",
-    link: "",
+    link: "https://brand-website-template.vercel.app/",
     category: "static",
   },
 ];
