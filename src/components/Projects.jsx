@@ -35,7 +35,7 @@ const cardData = [
     heading: "React JS, JavaScript, Tailwind CSS",
     body: "An e-commerce website template for products features a product display, shopping cart functionality, and a checkout process.",
     image: "../assets/Brand-Website.png",
-    link: "https://brand-website-template.vercel.app/",
+    link: "",
     category: "static",
   },
 ];
