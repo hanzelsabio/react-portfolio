@@ -29,6 +29,15 @@ const cardData = [
     link: "",
     category: "dynamic",
   },
+  {
+    id: 4,
+    title: "Brand Template",
+    heading: "React JS, JavaScript, Tailwind CSS, Node JS",
+    body: "An e-commerce product website template features a product display, shopping cart functionality, and a checkout process.",
+    image: "../assets/Brand-Website.png",
+    link: "",
+    category: "static",
+  },
 ];
 
 function Projects() {

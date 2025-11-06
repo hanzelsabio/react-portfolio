@@ -6,6 +6,7 @@ function Skills() {
     { name: "HTML / CSS", value: 100 },
     { name: "JavaScript", value: 70 },
     { name: "React JS", value: 30 },
+    { name: "Node JS", value: 100 },
     { name: "Tailwind CSS", value: 30 },
     { name: "Bootstrap", value: 100 },
     { name: "PHP", value: 70 },
@@ -56,7 +57,7 @@ function Skills() {
         <Row className="gy-4">
           {/* First Column */}
           <Col lg={4}>
-            {skillsData.slice(0, 7).map((skill, index) => (
+            {skillsData.slice(0, 8).map((skill, index) => (
               <div className="progress" key={index}>
                 <span className="skill">
                   <span>{skill.name}</span>{" "}
@@ -81,7 +82,7 @@ function Skills() {
 
           {/* Second Column */}
           <Col lg={4}>
-            {skillsData.slice(7, 10).map((skill, index) => (
+            {skillsData.slice(8, 11).map((skill, index) => (
               <div className="progress" key={index}>
                 <span className="skill">
                   <span>{skill.name}</span>{" "}
@@ -106,7 +107,7 @@ function Skills() {
 
           {/* Third Column */}
           <Col lg={4}>
-            {skillsData.slice(10, 13).map((skill, index) => (
+            {skillsData.slice(11, 14).map((skill, index) => (
               <div className="progress" key={index}>
                 <span className="skill">
                   <span>{skill.name}</span>{" "}
