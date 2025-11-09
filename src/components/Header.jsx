@@ -58,7 +58,7 @@ function Header() {
         <nav id="navmenu" className="navmenu">
           <ul>
             <li>
-              <a href="/" className="active">
+              <a href="#" className="active">
                 Home
               </a>
             </li>
