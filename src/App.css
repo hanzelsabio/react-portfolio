@@ -172,8 +172,8 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-  # Navigation Menu
-  --------------------------------------------------------------*/
+# Navigation Menu
+--------------------------------------------------------------*/
 /* Desktop Navigation */
 @media (min-width: 770px) {
   .navmenu {
@@ -328,7 +328,7 @@ h6 {
     list-style: none;
     position: absolute;
     inset: 60px 0 0 0;
-    padding: 50px 30px;
+    padding: 50px 40px;
     margin: 0;
     border-radius: 0;
     box-shadow: none;
@@ -340,9 +340,9 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: #fff;
-    padding: 18px 20px;
+    padding: 20px 30px;
     font-family: var(--nav-font);
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -422,7 +422,7 @@ h6 {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.83);
     transition: 0.3s;
   }
 
