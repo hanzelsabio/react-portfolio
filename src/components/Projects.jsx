@@ -38,6 +38,15 @@ const cardData = [
     link: "https://brand-website-template.vercel.app/",
     category: "static",
   },
+  {
+    id: 5,
+    title: "Fella Screen Prints",
+    heading: "React JS, JavaScript, Tailwind CSS",
+    body: "A custom apparel printing business features a dynamic website with service showcase.",
+    image: "../assets/Fella-Web.png",
+    link: "",
+    category: "static",
+  },
 ];
 
 function Projects() {
