@@ -6,7 +6,7 @@ function Skills() {
     { name: "HTML / CSS", value: 100 },
     { name: "JavaScript", value: 70 },
     { name: "React JS", value: 30 },
-    { name: "Node JS", value: 100 },
+    { name: "Node JS", value: 50 },
     { name: "Tailwind CSS", value: 100 },
     { name: "Bootstrap", value: 100 },
     { name: "PHP", value: 70 },
