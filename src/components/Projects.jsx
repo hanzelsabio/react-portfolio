@@ -4,15 +4,6 @@ import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
 const cardData = [
   {
     id: 1,
-    title: "DPT Inc. Website",
-    heading: "HTML, CSS, JavaScript, Bootstrap",
-    body: "One of my internship project, a static website design created for DPT Incorporated.",
-    image: "../assets/DPTInc-Website.png",
-    link: "https://dptincgenerator.vercel.app/",
-    category: "static",
-  },
-  {
-    id: 2,
     title: "Online Portfolio",
     heading: "React JS, Bootstrap",
     body: "My personal portfolio website",
@@ -21,16 +12,7 @@ const cardData = [
     category: "static",
   },
   {
-    id: 3,
-    title: "IV Inventory System",
-    heading: "PHP, JavaScript, Bootstrap, MySQL",
-    body: "Personal project features inventory management system",
-    image: "../assets/IV-Inventory-System.png",
-    link: "",
-    category: "dynamic",
-  },
-  {
-    id: 4,
+    id: 2,
     title: "Brand Template",
     heading: "React JS, JavaScript, Tailwind CSS",
     body: "An e-commerce website template for products features a product display, shopping cart functionality, and a checkout process.",
@@ -39,7 +21,7 @@ const cardData = [
     category: "static",
   },
   {
-    id: 5,
+    id: 3,
     title: "Fella Screen Prints",
     heading: "React JS, JavaScript, Tailwind CSS",
     body: "A custom apparel printing business features a dynamic website with service showcase.",
