@@ -49,7 +49,7 @@ function About() {
                 <Col lg={8}>
                   <h4>Let's Connect</h4>
                   <div className="social-icon d-flex align-items-center">
-                    <a href="https://github.com/hanzelsabio" target="_blank">
+                    <a href="" target="_blank">
                       <i className="bi bi-github flex-shrink-0"></i>
                     </a>
                     <a
