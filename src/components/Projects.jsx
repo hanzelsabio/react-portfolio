@@ -25,7 +25,7 @@ const cardData = [
     title: "Fella Screen Prints",
     heading: "React JS, JavaScript, Tailwind CSS",
     body: "A custom apparel printing business features a dynamic website with service showcase.",
-    image: "../assets/Fella-Web.png",
+    image: "../assets/fella-web.png",
     link: "",
     category: "dynamic",
   },
